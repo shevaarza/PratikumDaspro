@@ -22,9 +22,9 @@ while (loop) {
         } else {
             System.out.println("System error please try again ");
         }         
-}
-       
-       
+    }
+
+    sc.close();   
 
     }
 }

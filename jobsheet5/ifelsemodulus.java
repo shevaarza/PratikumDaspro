@@ -18,5 +18,6 @@ public class ifelsemodulus{
             System.out.println("===== The result =====");
             System.out.println("The number is Odd !!");
         }
+        input.close();
     }
 }

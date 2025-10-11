@@ -15,9 +15,9 @@ public class Assigment3 {
         boolean onlineRegistration = onlineReg.equals("yes");
         
         if (hasStudentID || onlineRegistration) {
-            System.out.println("✓ Access granted to library");
+            System.out.println(" Access granted to library");
         } else {
-            System.out.println("✗ Access denied to library");
+            System.out.println(" Access denied to library");
         }
         
         // WiFi System
@@ -27,20 +27,20 @@ public class Assigment3 {
         
         switch (userType) {
             case "lecturer":
-                System.out.println("✓ WiFi access granted (lecturer)");
+                System.out.println(" WiFi access granted (lecturer)");
                 break;
             case "student":
                 System.out.print("Enter number of credits taken: ");
                 int credits = sc.nextInt();
                 
                 if (credits >= 12) {
-                    System.out.println("✓ WiFi access granted (active student)");
+                    System.out.println(" WiFi access granted (active student)");
                 } else {
-                    System.out.println("✗ Access denied, credits less than 12");
+                    System.out.println(" Access denied, credits less than 12");
                 }
                 break;
             default:
-                System.out.println("✗ Access denied - invalid user type");
+                System.out.println(" Access denied - invalid user type");
         }
         
         sc.close();

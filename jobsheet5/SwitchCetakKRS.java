@@ -34,5 +34,6 @@ public class SwitchCetakKRS {
             System.out.println(" Invalid Semester ");
                 break;
         }
+        input.close();
     }
 }
