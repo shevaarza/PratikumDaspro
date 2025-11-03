@@ -9,7 +9,7 @@ public class Star {
     System.out.print("Enter the value of N :");
     int n = scanner.nextInt();
 
-    for(int i = 0 ; i <= n ; i++){
+    for(int i = 0 ; i > n ; i++){
         System.out.print("*");
     }
         
