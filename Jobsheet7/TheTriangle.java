@@ -27,7 +27,6 @@ public static void main(String[] args) {
         for (int j = 1; j <= i; j++) {
             System.out.print("* "); // Cetak "* " (dgn spasi) tanpa ganti baris
         }
-       UPDA 
         // Setelah loop dalam selesai (semua bintang di 1 baris tercetak),
         // kita pindah ke baris baru.
         System.out.println(); 
