@@ -17,3 +17,15 @@ public class Square {
     }
     
 }
+
+
+// 3. What is the difference between outer loop and inner loop?
+//     answer : 
+
+//     ✅ Outer Loop
+//     The main loop on the outside.
+//     It runs first, and controls how many times the inner loop repeats.
+
+//     ✅ Inner Loop
+//     A loop inside the outer loop.
+//     It repeats many times for every one time the outer loop runs.
