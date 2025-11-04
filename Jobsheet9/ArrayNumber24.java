@@ -14,3 +14,11 @@ public class ArrayNumber24 {
         System.out.println(number[i]);
     }
 }
+
+        // 4. If the condition in the for-loop statement is changed to i <= 4, what is the output of 
+        // the program? Why is the result like that?
+
+        // The correct condition must be i < 4 or i < number.length
+        // If i <= 4, the program will try to access the 4th index and cause an error.
+
+
