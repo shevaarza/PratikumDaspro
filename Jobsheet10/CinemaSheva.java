@@ -13,6 +13,7 @@ public class CinemaSheva {
         audience [2][0] = "Asep";
         audience [2][1] = "Rudi";
         audience [3][0] = "Susi";
+        audience [3][1] = "kemar";
         
       System.out.printf("%-10s %-10s%n", audience[0][0], audience[0][1]);
         System.out.printf("%-10s %-10s%n", audience[1][0], audience[1][1]);
