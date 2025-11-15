@@ -67,3 +67,15 @@ public class CinemawithScSheva {
 // In this implementation, the array elements do not have to be filled in sequentially starting from
 // the 0th index. The program allows users to choose specific seats (row and column) for each audience
 
+
+// 4. In menu 1, modify the program code to give a warning if the selected seat is already 
+// occupied by other audiences, then display a command to enter rows and columns 
+// again 
+// answer:
+// The program checks if the selected seat is already occupied by checking if the corresponding
+
+// 5. In menu 2, if the seat is empty, replace null with ***
+// answer:
+// In the display section of the program, if an array element is null (indicating an empty seat),
+//  it prints "[ Empty ]" instead of null. member. Users can select any seat they want, and the program will place their name in the chosen
+
