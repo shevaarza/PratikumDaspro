@@ -96,3 +96,90 @@ public class System_Survey_2D {
     }
 }
 
+
+// BEGIN
+
+//     DECLARE program[3] = {"Infrastruktur", "Kesehatan", "Pendidikan"}
+//     DECLARE jumlahProgram = 3
+//     DECLARE jumlahResponden = 3
+
+//     DECLARE daerah[jumlahProgram][jumlahResponden] AS STRING
+//     DECLARE nilai[jumlahProgram][jumlahResponden] AS INTEGER
+//     DECLARE rataProgram[jumlahProgram] AS DOUBLE
+
+//     PRINT "===== SURVEY SISTEM PEMERINTAH ====="
+
+//     FOR i FROM 0 TO jumlahProgram - 1 DO
+//         PRINT "== Program", program[i], "=="
+
+//         FOR j FROM 0 TO jumlahResponden - 1 DO
+            
+//             PRINT "Daerah responden ke-", j+1
+//             INPUT daerah[i][j]
+
+//             REPEAT
+//                 PRINT "Nilai kepuasan (1-5): "
+//                 INPUT n
+
+//                 IF n >= 1 AND n <= 5 THEN
+//                     nilai[i][j] = n
+//                     EXIT LOOP
+//                 ELSE
+//                     PRINT "Nilai harus 1–5, ulangi!"
+//                 ENDIF
+
+//             UNTIL valid input
+
+//         END FOR
+
+//     END FOR
+
+
+//     PRINT "========= HASIL SURVEY ========="
+
+//     FOR i FROM 0 TO jumlahProgram - 1 DO
+        
+//         PRINT "--- Program ", program[i], " ---"
+//         PRINT table header
+
+//         SET total = 0
+//         SET maxNilai = nilai terkecil (misalnya -999)
+//         SET daerahMax = ""
+
+//         FOR j FROM 0 TO jumlahResponden - 1 DO
+            
+//             PRINT daerah[i][j], nilai[i][j]
+            
+//             total = total + nilai[i][j]
+
+//             IF nilai[i][j] > maxNilai THEN
+//                 maxNilai = nilai[i][j]
+//                 daerahMax = daerah[i][j]
+//             ENDIF
+
+//         END FOR
+
+//         rataProgram[i] = total / jumlahResponden
+
+//         PRINT "Rata-rata nilai: ", rataProgram[i]
+//         PRINT "Nilai tertinggi:", maxNilai, "oleh daerah:", daerahMax
+
+//     END FOR
+
+
+//     // MENENTUKAN PROGRAM FAVORIT
+//     SET maxRata = rataProgram[0]
+//     SET favorit = program[0]
+
+//     FOR i FROM 1 TO jumlahProgram - 1 DO
+//         IF rataProgram[i] > maxRata THEN
+//             maxRata = rataProgram[i]
+//             favorit = program[i]
+//         ENDIF
+//     END FOR
+
+//     PRINT "===== PROGRAM FAVORIT ====="
+//     PRINT "Program dengan kepuasan tertinggi:", favorit
+//     PRINT "Rata-rata:", maxRata
+
+// END

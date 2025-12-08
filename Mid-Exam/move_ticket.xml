@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Movie Ticket Flowchart">
+    <mxGraphModel dx="1000" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Start -->
+        <mxCell id="start" value="Start" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="360" y="20" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Input day -->
+        <mxCell id="inputDay" value="Input: Enter day type (weekday / weekend)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="90" width="240" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Input age -->
+        <mxCell id="inputAge" value="Input: Enter viewer age" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="240" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Decision: weekday? -->
+        <mxCell id="decDay" value="Decision: Day = 'weekday' ?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="240" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- WEEKDAY branch - age <= 12 -->
+        <mxCell id="wd_child" value="Age ≤ 12 ?\n→ total_price = base_price * 0.5\nNote: Discount 50%" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="340" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- WEEKDAY branch - age 13..59 -->
+        <mxCell id="wd_adult" value="Age 13–59 ?\n→ total_price = base_price\nNote: Normal price" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="340" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- WEEKDAY branch - age ≥ 60 -->
+        <mxCell id="wd_senior" value="Age ≥ 60 ?\n→ total_price = base_price * 0.7\nNote: Discount 30%" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="340" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- WEEKEND branch decision block (right side) -->
+        <mxCell id="wd_else" value="(weekday conditions not met)\n→ Invalid age?" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="440" width="240" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- WEEKEND main -->
+        <mxCell id="wk_branch" value="WEEKEND branch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;" vertex="1" parent="1">
+          <mxGeometry x="320" y="240" width="240" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- WEEKEND - child (<=12) -->
+        <mxCell id="we_child" value="Age ≤ 12 ?\n→ total_price = base_price * 0.7\nNote: Discount 30%" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="520" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- WEEKEND - youth surcharge 18..25 -->
+        <mxCell id="we_youth" value="Age 18–25 ?\n→ total_price = base_price * 1.05\nNote: 5% surcharge" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="520" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- WEEKEND - normal 13..59 -->
+        <mxCell id="we_adult" value="Age 13–59 ?\n→ total_price = base_price\nNote: Normal price" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="640" y="520" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- WEEKEND - senior ≥60 -->
+        <mxCell id="we_senior" value="Age ≥ 60 ?\n→ total_price = base_price * 0.9\nNote: Discount 10%" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="620" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Invalid Day Type -->
+        <mxCell id="invalidDay" value="Invalid day type → print error & exit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;" vertex="1" parent="1">
+          <mxGeometry x="640" y="160" width="240" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Output -->
+        <mxCell id="output" value="Output Results:\n- Day Type\n- Viewer Age\n- Base Price\n- Total Price\n- Note" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E2EFDA;" vertex="1" parent="1">
+          <mxGeometry x="320" y="720" width="320" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- End -->
+        <mxCell id="end" value="End" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="360" y="840" width="120" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="start" target="inputDay">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="inputDay" target="inputAge">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="inputAge" target="decDay">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- From decision day to weekday branch (yes) -->
+        <mxCell id="e_dec_weekday" edge="1" parent="1" source="decDay" target="wd_child" style="edgeStyle=orthogonalEdgeStyle;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- weekday age branches chain (for visualization we connect decision to each case) -->
+        <mxCell id="e_wd_child_to_output" edge="1" parent="1" source="wd_child" target="wd_else" style="edgeStyle=orthogonalEdgeStyle;"/>
+        <mxCell id="e_wd_adult_to_output" edge="1" parent="1" source="wd_adult" target="wd_else" style="edgeStyle=orthogonalEdgeStyle;"/>
+        <mxCell id="e_wd_senior_to_output" edge="1" parent="1" source="wd_senior" target="wd_else" style="edgeStyle=orthogonalEdgeStyle;"/>
+
+        <!-- From weekday-other (wd_else) to output -->
+        <mxCell id="e_wd_else_to_output" edge="1" parent="1" source="wd_else" target="output" style="edgeStyle=orthogonalEdgeStyle;"/>
+
+        <!-- From decDay to weekend branch when NO -->
+        <mxCell id="e_dec_weekend" edge="1" parent="1" source="decDay" target="wk_branch" style="edgeStyle=orthogonalEdgeStyle;"/>
+        <mxCell id="e_wk_to_we_child" edge="1" parent="1" source="wk_branch" target="we_child" style="edgeStyle=orthogonalEdgeStyle;"/>
+        <mxCell id="e_we_child_to_we_youth" edge="1" parent="1" source="we_child" target="we_youth" style="edgeStyle=orthogonalEdgeStyle;"/>
+        <mxCell id="e_we_youth_to_we_adult" edge="1" parent="1" source="we_youth" target="we_adult" style="edgeStyle=orthogonalEdgeStyle;"/>
+        <mxCell id="e_we_adult_to_we_senior" edge="1" parent="1" source="we_adult" target="we_senior" style="edgeStyle=orthogonalEdgeStyle;"/>
+        <mxCell id="e_we_senior_to_output" edge="1" parent="1" source="we_senior" target="output" style="edgeStyle=orthogonalEdgeStyle;"/>
+
+        <!-- invalid day path -->
+        <mxCell id="e_invalidDay" edge="1" parent="1" source="decDay" target="invalidDay" style="edgeStyle=orthogonalEdgeStyle;dashed=1;strokeColor=#FF0000;"/>
+        <mxCell id="e_invalid_to_end" edge="1" parent="1" source="invalidDay" target="end" style="edgeStyle=orthogonalEdgeStyle;"/>
+
+        <!-- output to end -->
+        <mxCell id="e_output_end" edge="1" parent="1" source="output" target="end" style="edgeStyle=orthogonalEdgeStyle;"/>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
