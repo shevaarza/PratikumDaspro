@@ -1,6 +1,7 @@
 public class Gratitude26 {
     public static void main(String[] args) {
         SayThankyou();
+        System.out.println("thanks for being the best teacher in the world ");
     }
 
 
@@ -28,3 +29,9 @@ public class Gratitude26 {
 //     return 100;
 // }
 
+// 3. What are the benefits of using functions in a program?
+// ✔ 1. Reusability (kode bisa dipakai ulang)
+// ✔ 2. Makes code organized (lebih terstruktur)
+// ✔ 3. Easier maintenance (lebih mudah diperbaiki)
+// ✔ 4. Improves readability (lebih mudah dibaca)
+// ✔ 5. Supports modular programming
